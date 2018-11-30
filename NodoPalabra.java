@@ -28,6 +28,13 @@ public class NodoPalabra {
             return nodo.fe;
         }
     }
+    //obtener maxima altura
+    public int obtenerProfundidad(){
+        int profundidad = 0;
+        profundidad = Math.max(obtenerFe(raiz.nodoDer),obtenerFe(raiz.nodoIzq));
+        
+        return profundidad;
+    }
     //Rotacion simple izquierda
     public NodoPalabra rotacionIzquierda(NodoPalabra nodo){
         NodoPalabra auxiliar = nodo.nodoIzq;
@@ -100,7 +107,7 @@ public class NodoPalabra {
                         }
                     }
                 }else{
-                    System.out.println("Palabra Duplicada");
+                    
                     insertarAVL(nuevo, subAr,true);
                 }
         }else{
@@ -258,4 +265,6 @@ public class NodoPalabra {
             System.out.print(nodo.datos+", ");
         }
     }
+    
+   
 }

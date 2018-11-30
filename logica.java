@@ -58,4 +58,14 @@ public class logica {
         return palabras;
     }
     
+    public void mostraProfundidad(){
+        int profundidad = 0;
+        profundidad = raiz.obtenerProfundidad();
+        profundidad+=1;
+        System.out.println();
+        System.out.println("La profundiad es de,"+ profundidad);
+    }
+    
+    
+    
 }
